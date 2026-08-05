@@ -1,0 +1,83 @@
+generated: '2026-08-05'
+method: probed
+note: >-
+  Every /.well-known/ path probed on every Scene Health host missed. Two of the hosts
+  answer 200 to ANY path (single-page-app catch-alls) and one answers a bot challenge,
+  so a bare status code is not evidence here — each host was diffed against a control
+  path (/zzz-nope-12345) and every "200" below is the same body the control returns.
+  No document was saved; no WellKnown pointer is wired into apis.yml, because nothing
+  was found.
+hosts:
+- host: https://www.scene.health
+  control_path: /zzz-nope-12345
+  control_status: 404
+  control_content_type: text/html
+  verdict: real-404s — status codes on this host are trustworthy
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+  - {path: /openapi.json, status: 404}
+  - {path: /swagger.json, status: 404}
+  - {path: /llms.txt, status: 200, content_type: text/plain, bytes: 1421, file: ../llms/scene-health-llms.txt}
+- host: https://app.scene.health
+  control_path: /zzz-nope-12345
+  control_status: 200
+  control_content_type: text/html
+  control_bytes: 999
+  verdict: >-
+    SOFT-404 — React single-page-app catch-all returns HTTP 200 with the identical
+    999-byte HTML shell for every path, including /openapi.json and
+    /.well-known/agent-card.json. No 200 on this host is evidence of anything.
+  documents:
+  - {path: /.well-known/security.txt, status: 200, body: spa-shell-html, real: false}
+  - {path: /.well-known/agent-card.json, status: 200, body: spa-shell-html, real: false}
+  - {path: /.well-known/agent.json, status: 200, body: spa-shell-html, real: false}
+  - {path: /openapi.json, status: 200, body: spa-shell-html, real: false}
+  - {path: /swagger.json, status: 200, body: spa-shell-html, real: false}
+  - {path: /llms.txt, status: 200, body: spa-shell-html, real: false}
+  - {path: /.well-known/openid-configuration, status: 200, body: spa-shell-html, real: false}
+  - {path: /.well-known/oauth-authorization-server, status: 200, body: spa-shell-html, real: false}
+  - {path: /.well-known/api-catalog, status: 200, body: spa-shell-html, real: false}
+  - {path: /.well-known/ai-plugin.json, status: 200, body: spa-shell-html, real: false}
+- host: https://app.emocha.com
+  control_path: /zzz-nope-12345
+  control_status: 200
+  control_content_type: text/html
+  control_bytes: 999
+  verdict: SOFT-404 — same SPA shell as app.scene.health; the production member/care-team login host.
+  documents:
+  - {path: /.well-known/security.txt, status: 200, body: spa-shell-html, real: false}
+  - {path: /.well-known/agent-card.json, status: 200, body: spa-shell-html, real: false}
+  - {path: /openapi.json, status: 200, body: spa-shell-html, real: false}
+  - {path: /api-docs, status: 200, body: spa-shell-html, real: false}
+  - {path: /docs, status: 200, body: spa-shell-html, real: false}
+- host: https://emocha.com
+  control_path: /zzz-nope-12345
+  control_status: 202
+  control_content_type: text/html
+  control_bytes: 183
+  verdict: >-
+    BOT CHALLENGE — legacy corporate domain returns HTTP 202 with a SiteGround
+    sgcaptcha meta-refresh interstitial for every path. Not probeable anonymously.
+  documents:
+  - {path: /openapi.json, status: 202, body: sgcaptcha-interstitial, real: false}
+- host: https://scenehealth.com
+  control_path: /zzz-nope-12345
+  control_status: 200
+  control_content_type: text/html
+  control_bytes: 114
+  verdict: >-
+    NOT SCENE HEALTH — this domain is parked and listed for sale on the GoDaddy
+    aftermarket. Its /llms.txt is a domain-sale blurb, not a company document.
+    Scene Health's own llms.txt links to this domain, so those links are stale.
+  documents:
+  - {path: /llms.txt, status: 200, content_type: text/plain, bytes: 583, real: false, note: godaddy-for-sale-blurb}
+nxdomain:
+- api.scene.health
+- developer.scene.health
+- docs.scene.health

@@ -1,0 +1,66 @@
+generated: '2026-08-05'
+method: searched
+source: https://www.scene.health/resources/our-ongoing-commitment-to-data-security-scene-health-renews-its-soc-2-audit
+note: >-
+  Scene Health publishes no public API, no OpenAPI/AsyncAPI/GraphQL contract and no
+  developer documentation, so no API-level protocol conformance (OAuth2, OIDC, FHIR,
+  RFC 9457, pagination, idempotency) can be asserted or derived. What Scene does
+  publish is an organizational security and healthcare-regulatory posture, captured
+  below from its own site.
+standards:
+- id: soc2-type2
+  conforms: true
+  evidence: >-
+    "Scene Health renews its SOC 2 Type 2 compliance examination" — independent
+    auditor A-LIGN; examination covers all five trust services criteria (security,
+    availability, processing integrity, confidentiality, privacy).
+  source: https://www.scene.health/resources/our-ongoing-commitment-to-data-security-scene-health-renews-its-soc-2-audit
+  auditor: A-LIGN
+- id: hipaa
+  conforms: true
+  role: business-associate
+  evidence: >-
+    Privacy policy states Scene "may be a 'Business Associate' (as defined by HIPAA
+    regulations), but we are not a Covered Entity" and that member protected health
+    information (PHI) is handled under HIPAA and the HITECH Act.
+  source: https://www.scene.health/privacy-policy
+- id: hitech
+  conforms: true
+  evidence: Privacy policy names the HITECH Act alongside HIPAA as governing member PHI.
+  source: https://www.scene.health/privacy-policy
+- id: ostendio-myvcm-trust-network
+  conforms: true
+  evidence: >-
+    Awarded the annual Ostendio MyVCM Trust Network Award for cybersecurity and
+    compliance excellence (awarded as emocha Health).
+  source: https://www.scene.health/resources/emocha-health-wins-the-annual-ostendio-myvcm-trust-network-award-for-cybersecurity-and-compliance-excellence
+- id: hitrust
+  conforms: false
+  evidence: No HITRUST CSF certification claim found on the public site.
+- id: iso-27001
+  conforms: false
+  evidence: No ISO/IEC 27001 certification claim found on the public site.
+- id: fhir
+  conforms: false
+  evidence: >-
+    No FHIR, HL7 v2, SMART on FHIR or other health-interoperability surface is
+    documented publicly; no API contract exists to derive resource shapes from.
+- id: oauth2
+  conforms: false
+  evidence: No public OAuth 2.0 authorization server; /.well-known/oauth-authorization-server returns 404 on scene.health.
+- id: oidc
+  conforms: false
+  evidence: /.well-known/openid-configuration returns 404 on scene.health.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: No public API contract to evaluate.
+x-evidence:
+- url: https://www.scene.health/resources/our-ongoing-commitment-to-data-security-scene-health-renews-its-soc-2-audit
+  http_status: 200
+  fetched: '2026-08-05'
+- url: https://www.scene.health/privacy-policy
+  http_status: 200
+  fetched: '2026-08-05'
+- url: https://www.scene.health/resources/emocha-health-wins-the-annual-ostendio-myvcm-trust-network-award-for-cybersecurity-and-compliance-excellence
+  http_status: 200
+  fetched: '2026-08-05'
