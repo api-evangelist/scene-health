@@ -20,7 +20,7 @@ image: https://cdn.prod.website-files.com/6321d0ab8673ec82ca5ddfae/6333f381f9d1e
 url: https://raw.githubusercontent.com/api-evangelist/scene-health/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-08-05'
 modified: '2026-08-05'
 tags:
