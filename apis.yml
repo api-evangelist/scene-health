@@ -16,6 +16,17 @@ description: 'Scene Health (formerly emocha Mobile Health, founded 2008 out of J
   across all five trust services criteria. It publishes no public developer program,
   API documentation or machine-readable API contract; its software surface is the
   member and care-team application at app.emocha.com.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://cdn.prod.website-files.com/6321d0ab8673ec82ca5ddfae/6333f381f9d1e91ba135da2a_Open_Graph_image_v1.jpg
 url: https://raw.githubusercontent.com/api-evangelist/scene-health/refs/heads/main/apis.yml
 x-type: company
