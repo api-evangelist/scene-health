@@ -64,5 +64,86 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Scene Health is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/scene-health_stock/
+Scene Health (formerly emocha Mobile Health, founded 2008 out of Johns Hopkins and rebranded in 2022) is a Maryland-based digital health company tackling medication nonadherence. Its MedEngagement platform pairs a patient mobile app with a human care team of pharmacists, nurses and health coaches: members record daily video check-ins of themselves taking their medication — a scaled, asynchronous form of Directly Observed Therapy — and the care team reviews each dose, captures side effects and symptoms, and works barriers such as cost, transportation and social determinants of health. Scene sells to health plans and Medicaid MCOs, health systems, public health departments, employers, and research and clinical-trial organizations, with programs covering hypertension, diabetes, asthma, tuberculosis, HIV, hepatitis C, sickle cell disease, opioid use disorder and transplant care. The company raised a $17.7M Series B in March 2023 led by ABS Capital Partners. Scene operates as a HIPAA Business Associate and maintains a SOC 2 Type 2 attestation audited by A-LIGN across all five trust services criteria. It publishes no public developer program, API documentation or machine-readable API contract; its software surface is the member and care-team application at app.emocha.com.
+
+**Areas:** Company · Health · Healthcare · Digital Health · Medication Adherence · Patient Engagement · Telehealth · Medicaid · Public Health · Clinical Trials
+
+## Scene Health on APIs.io
+
+Everything profiled for Scene Health is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/scene-health/](https://apis.io/providers/scene-health/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Scene Health Domain Security](https://apis.io/security/scene-health/scene-health-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.scene.health/)
+- [Sign up](https://www.scene.health/enroll/partner-name)
+- [Support](https://www.scene.health/contact)
+- [Blog](https://www.scene.health/resources-category/blog)
+- [Compliance](https://www.scene.health/resources/our-ongoing-commitment-to-data-security-scene-health-renews-its-soc-2-audit)
+- [Terms of service](https://www.scene.health/terms-of-use)
+- [Privacy policy](https://www.scene.health/privacy-policy)
+- [GitHub](https://github.com/emochamobilehealth)
+
+## API Evangelist rating
+
+**Kin Score 19.6** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 42.1 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 23.4** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/scene-health/](https://apis.io/providers/scene-health/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Scene Health: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/scene-health/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
